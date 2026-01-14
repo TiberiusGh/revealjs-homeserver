@@ -11,12 +11,20 @@ app.use('/slides', express.static(SLIDES_DIR))
 app.get('/', async (req, res) => {
   try {
     const files = await fs.readdir(SLIDES_DIR)
-    const presentations = files
-      .filter((file) => file.endsWith('.html'))
-      .map((file) => ({
-        name: file.replace('.html', '').replace(/-/g, ' '),
-        filename: file
-      }))
+    const htmlFiles = files.filter((file) => file.endsWith('.html'))
+
+    const presentations = await Promise.all(
+      htmlFiles.map(async (file) => {
+        const stat = await fs.stat(path.join(SLIDES_DIR, file))
+        return {
+          name: file.replace('.html', '').replace(/-/g, ' '),
+          filename: file,
+          mtime: stat.mtime
+        }
+      })
+    )
+
+    presentations.sort((a, b) => b.mtime - a.mtime)
 
     res.send(generateIndexPage(presentations))
   } catch (error) {
