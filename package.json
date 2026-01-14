@@ -1,0 +1,20 @@
+{
+  "name": "revealjs-homeserver",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/TiberiusGh/revealjs-homeserver#readme",
+  "bugs": {
+    "url": "https://github.com/TiberiusGh/revealjs-homeserver/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiberiusGh/revealjs-homeserver.git"
+  },
+  "license": "ISC",
+  "author": "Tiberius Gherac",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

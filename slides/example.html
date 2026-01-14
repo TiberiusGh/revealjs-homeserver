@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Presentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Welcome</h1>
+          <p>This is an example presentation</p>
+        </section>
+
+        <section>
+          <h2>Slide Two</h2>
+          <p>Add your content here</p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Vertical Slides</h2>
+            <p>Press down to see more</p>
+          </section>
+          <section>
+            <h2>Nested Slide</h2>
+            <p>This is a vertical slide</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>The End</h2>
+          <p>Thanks for watching</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        transition: 'slide'
+      })
+    </script>
+  </body>
+</html>
