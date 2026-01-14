@@ -4,6 +4,6 @@ services:
     container_name: revealjs-server
     restart: unless-stopped
     ports:
-      - '8085:8080'
+      - '8095:8080'
     volumes:
       - ./slides:/app/slides:ro
