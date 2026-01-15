@@ -43,7 +43,12 @@ app.get('/', async (req, res) => {
 })
 
 const ACCENT_COLORS = [
-  '#7c8aff', '#ff7c7c', '#7cffb5', '#ffcf7c', '#c77cff', '#7cddff'
+  '#7c8aff',
+  '#ff7c7c',
+  '#7cffb5',
+  '#ffcf7c',
+  '#c77cff',
+  '#7cddff'
 ]
 
 function generateIndexPage(presentations) {
