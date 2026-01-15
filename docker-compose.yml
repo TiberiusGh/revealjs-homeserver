@@ -1,9 +1,9 @@
 services:
   revealjs:
-    build: .
+    image: ghcr.io/tiberiusgh/revealjs-homeserver:latest
     container_name: revealjs-server
     restart: unless-stopped
     ports:
-      - '8095:8080'
+      - '8085:8080'
     volumes:
       - ./slides:/app/slides:ro
