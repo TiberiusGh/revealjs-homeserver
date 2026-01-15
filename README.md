@@ -1,1 +1,1 @@
-This is the repository for the revealjs instance running on my homeserver at slides.tiberiusgh.com
+Reveal.js presentation server. Available at [slides.tiberiusgh.com](https://slides.tiberiusgh.com)
