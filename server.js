@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 8080
 const SLIDES_DIR = path.join(__dirname, 'slides')
 
 app.use('/slides', express.static(SLIDES_DIR))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', async (req, res) => {
   try {
@@ -90,6 +91,10 @@ function generateIndexPage(presentations) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Presentations</title>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
